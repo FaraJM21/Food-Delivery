@@ -1,19 +1,5 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import Layout from "./routes/Layout";
-// import Home from "./routes/Home";
-// import Restaurants from "./routes/Restaurants";
-// import Cart from "./routes/Cart";
-// import Profile from "./routes/Profile";
-// import Burgers from "./routes/Burgers";
-// import Pizza from "./routes/Pizza";
-// import Soup from "./routes/Soup";
-// import Chicken from "./routes/Chicken";
-// import Cakes from "./routes/Cakes";
-// import Cocktails from "./routes/Cocktails";
-// import Registr from "./routes/Registr";
-// import ProtectedRoutes from "./routes/ProtectedRoutes";
-// import Payment from "./routes/Payment";
 
 import {
   Layout,
