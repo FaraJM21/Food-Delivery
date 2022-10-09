@@ -81,7 +81,7 @@ function Profile() {
       <div className="loginCard" style={{ display: isloged ? "none" : "flex" }}>
         <h3 data-aos="zoom-in">Log In</h3>
         <form onSubmit={handleSubmit}>
-          <label data-aos="fade-up">
+          <label data-aos="fade-up"     data-aos-anchor=".other-element">
             Username
             <input
               name="username"
@@ -91,7 +91,7 @@ function Profile() {
             />
           </label>
 
-          <label data-aos="fade-up">
+          <label data-aos="fade-up"     data-aos-anchor=".other-element">
             Password
             <input
               name="psw"
@@ -103,6 +103,7 @@ function Profile() {
           <button
             disabled={!user.username || !user.psw || user.psw.length < 8}
             data-aos="fade-up"
+            data-aos-anchor=".other-element"
           >
             Log In
           </button>

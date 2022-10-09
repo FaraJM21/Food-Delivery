@@ -31,7 +31,7 @@ function Registr() {
         <h3 data-aos="zoom-in">Registration</h3>
 
         <form onSubmit={handleSubmit}>
-          <label data-aos="fade-up">
+          <label data-aos="fade-up"     data-aos-anchor=".other-element">
             Your Name
             <input
               name="name"
@@ -40,7 +40,7 @@ function Registr() {
               onChange={handleChange}
             />
           </label>
-          <label data-aos="fade-up">
+          <label data-aos="fade-up"     data-aos-anchor=".other-element">
             Username
             <input
               name="username"
@@ -49,7 +49,7 @@ function Registr() {
               onChange={handleChange}
             />
           </label>
-          <label data-aos="fade-up">
+          <label data-aos="fade-up"     data-aos-anchor=".other-element">
             City
             <input
               name="city"
@@ -58,7 +58,7 @@ function Registr() {
               onChange={handleChange}
             />
           </label>
-          <label data-aos="fade-up">
+          <label data-aos="fade-up"     data-aos-anchor=".other-element">
             Street
             <input
               name="street"
@@ -67,7 +67,7 @@ function Registr() {
               onChange={handleChange}
             />
           </label>
-          <label data-aos="fade-up">
+          <label data-aos="fade-up"     data-aos-anchor=".other-element">
             Tel
             <input
               name="tel"
@@ -78,7 +78,7 @@ function Registr() {
           
           </label>
 
-          <label data-aos="fade-up">
+          <label data-aos="fade-up"     data-aos-anchor=".other-element">
             Password
             <input
               name="psw"
