@@ -1,3 +1,14 @@
+Animations and Icons used to this project:
+
+Lottify JS : https://lottiefiles.com/
+
+
+Lord Icons : https://lordicon.com/
+
+
+AOS: https://michalsnik.github.io/aos/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
