@@ -3,8 +3,8 @@ import { MdStar } from "react-icons/md";
 import "../style/restaurants.scss";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import Snackbars from "../componets/Snackbars";
-import SecondSnackbar from "../componets/SecondSnackbar";
+import Snackbars from "../components/Snackbars";
+import SecondSnackbar from "../components/SecondSnackbar";
 import useFoods from "../hooks/useFoods";
 
 function Burgers() {

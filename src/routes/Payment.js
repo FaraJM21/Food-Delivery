@@ -5,7 +5,7 @@ import wifi from "../images/pngwing.com (1).png"
 import visa from "../images/visa2.png"
 import { useDispatch, useSelector } from "react-redux";
 import { addCreditCard } from "../redux/usersReducer";
-import ThirdSnackbar from "../componets/ThirdSnackbar";
+import ThirdSnackbar from "../components/ThirdSnackbar";
 import {useNavigate} from 'react-router';
 function Payment() {
   const [card, setCard] = useState({});
