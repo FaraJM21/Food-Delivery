@@ -175,7 +175,7 @@ function Restaurants() {
         >
           <div id="cake">
             <img
-              src="https://img4.goodfon.com/wallpaper/nbig/7/27/pirozhnye-konfety-klubnika-desert-sladosti-assorti.jpg"
+              src="https://w0.peakpx.com/wallpaper/651/638/HD-wallpaper-yummy-deserts-cool-food-yummy-entertainment-fun-desserts.jpg"
               alt="404"
             />
             <div className="info">
