@@ -26,7 +26,7 @@ const foodsSlice = createSlice({
         newPrice: 13,
         readyTime:15,
         quantity:1,
-        img: "https://img2.goodfon.com/wallpaper/nbig/7/42/pancakes-banana-bliny-vypechka.jpg",
+        img: "https://adashofmacros.com/wp-content/uploads/2020/05/Banana-Pancakes-1200-Width-2-1024x670.jpg",
       },
 
       {
@@ -81,7 +81,7 @@ const foodsSlice = createSlice({
         newPrice: 12,
         readyTime:30,
         quantity:1,
-        img: "https://img5.goodfon.com/wallpaper/nbig/7/c2/sendvichi-buterbrod-avokado-pomidor-sous.jpg",
+        img: "https://media.istockphoto.com/photos/sprouts-avocado-tomato-spinach-chickpeas-burger-rye-sandwich-picture-id516957550?k=20&m=516957550&s=612x612&w=0&h=bSRP-vyrhGA0tMYM5NNHsZqmCks-qqlEZc-xeFAcAGg=",
       },
 
       {
