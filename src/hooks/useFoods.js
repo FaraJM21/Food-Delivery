@@ -7,8 +7,6 @@ function useFoods(param) {
   let userName = useSelector((state) => state.loggedinUser.value);
   const foods = useSelector((state) => state.foods.foods);
   const food = foods.filter((food) => food.category === `${param}`); //MUST CONFIRM PARAM
-  let windowWidth = useSelector((state) => state.window.value);
-  let canvas = useSelector((state) => state.offcanvas.isOpen);
   let isLogedIn = useSelector((state) => state.isLoged.isLoged);
   let user = users.find((user) => user.username === userName);
   let dispatch = useDispatch();
@@ -48,8 +46,6 @@ function useFoods(param) {
 
   return [
     food,
-    windowWidth,
-    canvas,
     open,
     isOrdered,
     foodName,

@@ -1,0 +1,485 @@
+@import "../../assets/colors";
+@import "../../assets/mixin";
+
+
+.cartSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin-top: 5%;
+  padding: 120px 20px;
+  .cartCont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .check,
+    .paymentProgress {
+      width: 100%;
+      height: 700px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+      background: linear-gradient(135.77deg, $silver2nd -94.16%, $myBlack 100%);
+      backdrop-filter: blur(6px);
+      border-radius: 44px;
+      border: 2px solid $myOrange;
+      padding: 0 50px;
+
+      .foodCost,
+      .total,
+      .tax {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        height: 150px;
+        align-items: center;
+        gap: 30px;
+        border-bottom: 1px solid $myYellow;
+      }
+
+      .tax {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 190px;
+        div {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      .btns {
+        display: flex;
+
+        button {
+          @include button;
+          width: 100px;
+          height: 40px;
+          border-radius: 10px;
+        }
+
+        button:hover {
+          color: $myBlack;
+          background-size: 100% 100%;
+          background-position-x: left;
+        }
+      }
+
+      a {
+        @include button;
+        width: 100px;
+        height: 40px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      a:hover {
+        color: $myBlack;
+        background-size: 100% 100%;
+        background-position-x: left;
+      }
+    }
+
+    .paymentProgress {
+      display: none;
+      gap: 30px;
+      align-items: center;
+      #progress {
+        width: 400px;
+        height: 400px;
+        filter: drop-shadow(8px 8px 5px $myYellow);
+      }
+      .progressCont {
+        position: relative;
+        width: 300px;
+        height: 30px;
+        border-radius: 44px;
+        border: 1px solid $myOrange;
+        .progressBar {
+          position: absolute;
+          background-color: $myOrange;
+          height: 100%;
+          border-radius: 44px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+      }
+      .paymentInfo {
+        width: 450px;
+        position: relative;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #anim {
+          position: absolute;
+          width: 100px;
+          height: 100px;
+          right: 0;
+          bottom: 9%;
+        }
+      }
+    }
+
+    #nextBtn {
+      @include button;
+      width: 100px;
+      height: 40px;
+      border-radius: 10px;
+      margin-left: 5%;
+    }
+
+    #nextBtn:hover {
+      color: $myBlack;
+      background-size: 100% 100%;
+      background-position-x: left;
+    }
+
+    #table {
+      width: 95%;
+      margin: auto;
+      background: linear-gradient(135.77deg, $silver2nd -94.16%, $myBlack 100%);
+      background-color: $myYellow;
+      backdrop-filter: blur(6px);
+      text-align: center;
+
+      #thead {
+        border: 2px solid $myOrange;
+        tr {
+          th {
+            border: 2px solid $myOrange;
+            color: $myBlack;
+          }
+        }
+      }
+      #tbody {
+        border: 2px solid $myOrange;
+        tr {
+          text-align: center;
+          td {
+            background: linear-gradient(
+              135.77deg,
+              $silver2nd -94.16%,
+              $myBlack 100%
+            );
+
+            border: 2px solid $myOrange;
+            width: 200px;
+            position: relative;
+            height: 185px;
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 10px;
+            }
+            text-align: center;
+            p,
+            span {
+              width: 100%;
+              height: 15%;
+              margin: auto;
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              font-size: 20px;
+            }
+
+            #price {
+              color: lime;
+            }
+
+            span {
+              font-size: 30px;
+              height: 30%;
+              cursor: pointer;
+              transition: 0.5s;
+            }
+
+            span:hover {
+              transform: scale(1.1);
+            }
+
+            .quantity {
+              width: 100%;
+              height: 100%;
+              align-items: center;
+              position: relative;
+              display: flex;
+              justify-content: center;
+              padding: 0 25%;
+              p,
+              button {
+                width: 93%;
+                position: static;
+                height: 44px;
+                color: black;
+                border: 1px solid $myOrange;
+              }
+
+              p {
+                background-color: $mywhite;
+                color: $myBlack;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+
+              button {
+                background-color: $myOrange;
+                color: $myBlack;
+                font-size: 20px;
+              }
+              button:hover {
+                background: rgb(251, 198, 100);
+              }
+              button:active {
+                background-color: $myOrange;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 650px) and (max-width: 1026px) {
+  .cartSection {
+    .cartCont {
+      #table {
+        width: 100%;
+        #tbody {
+          tr {
+            td {
+              width: 250px;
+              height: 100px;
+              p {
+                font-size: 12px;
+              }
+
+              .quantity {
+                p,
+                button {
+                  width: 20px;
+                  height: 20px;
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 550px) and (max-width: 650px) {
+  .cartSection {
+    .cartCont {
+      #table {
+        width: 100%;
+        #thead {
+          tr {
+            th {
+              font-size: 12px;
+            }
+          }
+        }
+        #tbody {
+          tr {
+            td {
+              width: 190px;
+              height: 90px;
+              p {
+                width: 95%;
+                font-size: 10px;
+              }
+
+              span {
+                font-size: 25px;
+              }
+
+              .quantity {
+                p,
+                button {
+                  width: 20px;
+                  height: 20px;
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 420px) and (max-width: 550px) {
+  .cartSection {
+    .cartCont {
+      #table {
+        width: 100%;
+        #thead {
+          tr {
+            th {
+              font-size: 8px;
+            }
+          }
+        }
+        #tbody {
+          tr {
+            td {
+              width: 80px;
+              height: 60px;
+              img {
+                width: 100%;
+                height: 100%;
+                border-radius: 0px;
+              }
+              p {
+                width: 95%;
+
+                font-size: 1.5vw;
+              }
+
+              span {
+                font-size: 15px;
+                height: 50%;
+              }
+
+              .quantity {
+                p,
+                button {
+                  width: 20px;
+                  height: 15px;
+                  font-size: 7px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 450px) {
+  .cartSection {
+    position: relative;
+    .cartCont {
+      #table {
+        width: 100%;
+        #thead {
+          tr {
+            th {
+              font-size: 8px;
+            }
+          }
+        }
+        #tbody {
+          tr {
+            td {
+              width: 70px;
+              height: 40px;
+              img {
+                width: 40px;
+                height: 30px;
+                border-radius: 0px;
+              }
+              p {
+                width: 95%;
+                font-size: 1.2vw;
+              }
+
+              span {
+                font-size: 15px;
+                height: 50%;
+              }
+
+              .quantity {
+                p,
+                button {
+                  width: 15px;
+                  height: 10px;
+                  font-size: 1.2vw;
+                }
+              }
+            }
+          }
+        }
+      }
+      .paymentProgress {
+        position: absolute;
+        height: 450px;
+        top: 100%;
+        #progress {
+          width: 200px;
+          height: 200px;
+        }
+        .progressCont {
+          position: relative;
+          width: 200px;
+          height: 25px;
+          .progressBar {
+            position: absolute;
+            height: 100%;
+            font-size: 10px;
+          }
+        }
+        .paymentInfo {
+          width: 250px;
+          position: relative;
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          h5 {
+            font-size: 2vw;
+          }
+          #anim {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            right: 10%;
+            bottom: 30%;
+          }
+        }
+      }
+
+      .check {
+        height: 480px;
+        gap: 10px;
+        .foodCost,
+        .total,
+        .tax {
+          h4 {
+            font-size: 15px;
+          }
+        }
+
+        .foodCost,
+        .total {
+          height: 100px;
+        }
+        .btns {
+          a,
+          button {
+            width: 80px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}

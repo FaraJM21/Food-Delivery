@@ -3,7 +3,6 @@ import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import uniqid from "uniqid";
-import { isAdmin } from "../redux/isAdminReducer";
 import { isLoged } from "../redux/isLogedInReducer";
 import { setUserUsername } from "../redux/loginReducer";
 import { addUser } from "../redux/usersReducer";
@@ -11,7 +10,7 @@ import { addUser } from "../redux/usersReducer";
 function useForms(place) {
   let dispatch = useDispatch();
   let users = useSelector((state) => state.users.arr);
-  let admin = useSelector((state) => state.admin);
+
   const [user, setUser] = useState({});
   const ref = useRef(null);
   let navigate = useNavigate();
@@ -23,12 +22,10 @@ function useForms(place) {
         [e.target.name]: e.target.value,
         id: uniqid(),
         orderedFoods: [],
-        hasCard:false,
-        creditCard:{},
+        hasCard: false,
+        creditCard: {},
       });
-    } 
-    
-    else {
+    } else {
       setUser({
         ...user,
         [e.target.name]: e.target.value,
@@ -47,10 +44,9 @@ function useForms(place) {
       ) {
         ref.current.style = "color:orange; opacity:1";
         ref.current.innerHTML = "This user is already created";
-       
+
         setTimeout(() => {
           ref.current.style.opacity = "0";
-
         }, 3000);
       } else if (users.find((users) => users.username === user.username)) {
         ref.current.style = "color:orange; opacity:1";
@@ -64,56 +60,30 @@ function useForms(place) {
         setTimeout(() => {
           ref.current.style.opacity = "0";
         }, 3000);
-      } 
-
-      
-      
-      else {
+      } else {
         dispatch(addUser(user));
         ref.current.style = "color:lime; opacity:1";
         ref.current.innerHTML = "Accoount Created Successfully";
-        dispatch(setUserUsername(user.username)) 
-        dispatch(isLoged(true))
-       
+        dispatch(setUserUsername(user.username));
+        dispatch(isLoged(true));
+
         setTimeout(() => {
           ref.current.style.opacity = "0";
-          navigate('/')
+          navigate("/");
         }, 2000);
         setUser({});
       }
-    } 
-    
-    
-    
-    else {
-      if (user.username === admin.username && user.psw === admin.psw) {
-        dispatch(setUserUsername(user.username))
-        dispatch(isLoged(true))
-        dispatch(isAdmin(true))
-        navigate('/')
-        
-        setUser({});
-      
-      } 
-      
-      
-      
-      
-      else if (
+    } else {
+      if (
         users.find(
           (users) => users.username === user.username && users.psw === user.psw
         )
       ) {
-        dispatch(setUserUsername(user.username))
-        dispatch(isLoged(true))
+        dispatch(setUserUsername(user.username));
+        dispatch(isLoged(true));
         setUser({});
-       navigate('/')
-      
-      }
-      
-      
-      
-      else if (
+        navigate("/");
+      } else if (
         users.find(
           (users) => users.username === user.username && users.psw !== user.psw
         )
@@ -123,10 +93,7 @@ function useForms(place) {
         setTimeout(() => {
           ref.current.style = "opacity:0";
         }, 3000);
-      } 
-      
-      
-      else {
+      } else {
         ref.current.innerHTML = `This user doesn't exist`;
         ref.current.style = "color:red; opacity:1";
         setTimeout(() => {

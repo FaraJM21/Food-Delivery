@@ -1,0 +1,652 @@
+@import "../../assets/colors";
+@import "../../assets/mixin";
+
+main {
+  // margin-top: 5%;
+  width: 100%;
+  color: $mywhite;
+  transition: 0.5s;
+  padding: 50px 0;
+
+  .ellipse {
+    @include position(absolute, 375.78px, 370.78px, -163px, none, 0, none, 0);
+    background: $myOrange;
+    border-radius: 50%;
+    filter: drop-shadow(5px 5px 4px $myYellow);
+  }
+
+  .ellipse-2 {
+    @include position(absolute, 238.87px, 248.87px, none, 1%, none, -25%, 0);
+    filter: drop-shadow(5px 5px 4px $myYellow);
+  }
+
+  .home-cont {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    color: $mywhite;
+    justify-content: space-between;
+    padding: 10px 55px;
+    z-index: 1;
+    flex-wrap: wrap-reverse;
+
+    .track-on-window {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform-style: preserve-3d;
+      right: 30%;
+
+      .inner-element {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+        font-style: italic;
+        color: white;
+        transform: translateZ(60px);
+        img {
+          transform: rotate(60deg);
+          filter: drop-shadow(5px 5px 4px $myYellow);
+        }
+      }
+    }
+
+    .track-window {
+      position: absolute;
+      left: 0;
+      bottom: -25%;
+    }
+
+    .home-title {
+      position: relative;
+      z-index: 1;
+      margin-top: 5%;
+
+      h1 {
+        font-weight: 600;
+        font-size: 52px;
+        line-height: 71px;
+        font-size: 52px;
+        font-family: "Comfortaa", cursive;
+      }
+
+      p {
+        width: 450px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        font-family: "Comfortaa", cursive;
+      }
+
+      button {
+        @include button;
+      }
+
+      button:hover {
+        color: $myBlack;
+        background-size: 100% 100%;
+        background-position-x: left;
+      }
+    }
+    .pics {
+      top: 15%;
+      position: relative;
+      .card,
+      .card1,
+      .card2 {
+        @include position(relative, 578px, 582px, none, none, none, none, 1);
+        background: linear-gradient(
+          135.77deg,
+          $silver2nd -94.16%,
+          $myBlack 100%
+        );
+        backdrop-filter: blur(6px);
+        border-radius: 44px;
+        border: 2px solid $myOrange;
+
+        img {
+          position: absolute;
+          right: 15%;
+          filter: drop-shadow(5px 5px 4px $myYellow);
+        }
+      }
+
+      .card1,
+      .card2 {
+        display: none;
+      }
+    }
+  }
+
+  .food-categories {
+    width: 100%;
+    padding: 50px 20px;
+    margin-top: 10%;
+    position: relative;
+    z-index: 1;
+
+    h3 {
+      padding: 0px 70px;
+      font-size: 32px;
+      z-index: 1;
+      position: relative;
+    }
+    .food-icons {
+      width: 90%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 150px;
+      margin-top: 5%;
+      background: linear-gradient(180deg, $silver2nd 0.55%, $myBlack 100%);
+      backdrop-filter: blur(6px);
+      border: 2px solid $myOrange;
+      border-radius: 16px;
+      margin: 5% auto;
+      position: relative;
+      z-index: 1;
+
+      figcaption {
+        position: relative;
+        z-index: 1;
+      }
+
+      div {
+        @include display(flex, center, center, 96px, 110px);
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+
+        #foodIcon {
+          position: relative;
+          z-index: 1;
+          width: 50px;
+          height: 50px;
+          transition: all 500ms ease;
+        }
+      }
+
+      .iconDiv:hover {
+        position: relative;
+        z-index: 1;
+        background: linear-gradient(
+          135.77deg,
+          $silver2nd -94.16%,
+          $myBlack 100%
+        );
+        backdrop-filter: blur(42px);
+        border-radius: 13px;
+        border: 2px solid $myOrange;
+      }
+
+      .backpic {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 0;
+        height: 100%;
+        background: url(https://wallpaperaccess.com/full/512859.jpg) no-repeat
+          center center;
+        background-size: cover;
+        background-attachment: fixed;
+        filter: blur(5px) contrast(120%) brightness(20%);
+      }
+    }
+
+    .backpic {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      z-index: 0;
+      height: 100%;
+      background: url(https://wallpaperaccess.com/full/512859.jpg) no-repeat
+        center center;
+      background-size: cover;
+      background-attachment: fixed;
+      filter: blur(5px) contrast(120%) brightness(20%);
+    }
+
+    .food-container {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 0 10%;
+      z-index: 2;
+      position: relative;
+      padding: 50px 50px;
+
+      .foodCard {
+        position: relative;
+        width: 228px;
+        height: 286px;
+        z-index: 1;
+        background: linear-gradient(
+          135.77deg,
+          $silver2nd -94.16%,
+          $myBlack 100%
+        );
+        border: 1px solid $myOrange;
+        border-radius: 16px;
+        transition: all 0.7s ease;
+
+        img {
+          @include position(
+            absolute,
+            205px,
+            148px,
+            11px,
+            12px,
+            none,
+            none,
+            none
+          );
+          border-radius: 16px;
+          transition: all 0.7s ease;
+        }
+
+        .foodInfo {
+          position: absolute;
+          width: 90%;
+          left: 16px;
+          top: 167px;
+
+          h4 {
+            font-size: 16px;
+            color: $mywhite;
+          }
+
+          .price {
+            display: flex;
+            gap: 10px;
+
+            .old {
+              text-decoration: line-through;
+              color: $mySilver;
+            }
+
+            .new {
+              color: $myOrange;
+            }
+          }
+
+          #time,
+          #edit {
+            position: absolute;
+            right: 2%;
+            bottom: 2%;
+            font-size: 14px;
+          }
+
+          #edit {
+            right: 10%;
+            font-size: 25px;
+          }
+        }
+
+        #edit:hover {
+          #pen {
+            font-size: 30px;
+          }
+        }
+      }
+
+      .foodCard:hover {
+        background-color: $myYellow;
+        background-image: linear-gradient(90deg, $myYellow 0%, $myOrange 100%);
+        color: black;
+        border-radius: 0 0 16px 16px;
+
+        .foodInfo {
+          h4 {
+            color: $myBlack;
+          }
+          .price {
+            .old {
+              color: black;
+            }
+
+            .new {
+              color: $mywhite;
+            }
+          }
+        }
+
+        img {
+          top: 0;
+          left: 0;
+          border-radius: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1131px) and (max-width: 1375px) {
+  main {
+    .home-cont {
+      .track-on-window,
+      .track-window {
+        display: none;
+      }
+      flex-direction: column;
+
+      .pics {
+        width: 100%;
+        position: static;
+        display: flex;
+        justify-content: space-evenly;
+        .card,
+        .card1,
+        .card2 {
+          @include position(static, 300px, 300px, none, none, none, none, none);
+
+          img {
+            width: 100%;
+            position: static;
+          }
+        }
+        .card1,
+        .card2 {
+          display: flex;
+          justify-content: center;
+          img {
+            width: 80%;
+            height: 90%;
+            position: static;
+          }
+        }
+        // .card1{
+        //   img{
+        //     width: 95%;
+        //     height: 100%;
+        //     position: static;
+        //   }
+        // }
+      }
+
+      .home-title {
+        width: 100%;
+        text-align: center;
+        h1,
+        p {
+          flex: 0 0 100%;
+          max-width: 100%;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 880px) and (max-width: 1131px) {
+  main {
+    padding: 100px 0;
+    .home-cont {
+      flex-direction: column;
+      justify-content: space-evenly;
+      // height: 490px;
+      .track-on-window,
+      .track-window {
+        display: none;
+      }
+
+      .pics {
+        width: 100%;
+        position: static;
+        display: flex;
+        justify-content: space-around;
+        .card,
+        .card1,
+        .card2 {
+          @include position(static, 200px, 200px, none, none, none, none, none);
+
+          img {
+            width: 100%;
+            position: static;
+          }
+        }
+        .card1,
+        .card2 {
+          display: flex;
+          justify-content: center;
+          img {
+            width: 80%;
+            height: 90%;
+            position: static;
+          }
+        }
+      }
+
+      .home-title {
+        width: 100%;
+        text-align: center;
+        h1,
+        p {
+          flex: 0 0 100%;
+          max-width: 100%;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+    .food-categories {
+      h3 {
+        font-size: 22px;
+        text-align: center;
+      }
+      .food-icons {
+        width: 80%;
+        flex-wrap: wrap;
+        background: none;
+        border: none;
+        height: 460px;
+
+        div {
+          width: 120px;
+        }
+        figcaption {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 533px) and (max-width: 879px) {
+  main {
+    .ellipse-2,
+    .card {
+      display: none;
+    }
+    .home-cont {
+      height: 400px;
+      .track-on-window {
+        display: none;
+      }
+
+      .home-title {
+        width: 100%;
+        text-align: center;
+        h1,
+        p {
+          flex: 0 0 100%;
+          max-width: 100%;
+          width: 100%;
+          text-align: center;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .food-categories {
+      h3 {
+        font-size: 22px;
+        text-align: center;
+      }
+      .food-icons {
+        width: 80%;
+        flex-wrap: wrap;
+        background: none;
+        border: none;
+        height: 460px;
+
+        div {
+          width: 120px;
+        }
+        figcaption {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 484px) and (max-width: 532px) {
+  main {
+    .ellipse-2,
+    .card {
+      display: none;
+    }
+    .home-cont {
+      height: 470px;
+      .track-on-window {
+        display: none;
+      }
+
+      .home-title {
+        width: 100%;
+        text-align: center;
+        h1 {
+          font-size: 20px;
+        }
+        p {
+          width: 400px;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .food-categories {
+      width: 100%;
+      margin: auto;
+
+      h3 {
+        font-size: 22px;
+        text-align: center;
+      }
+      .food-icons {
+        width: 80%;
+        flex-wrap: wrap;
+        background: none;
+        border: none;
+        height: 460px;
+        margin: auto;
+
+        div {
+          width: 120px;
+        }
+        figcaption {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and(max-width:483px) {
+  main {
+    padding: 150px 0;
+    .ellipse-2,
+    .card {
+      display: none;
+    }
+    .home-cont {
+      height: 570px;
+      .track-on-window {
+        display: none;
+      }
+
+      .home-title {
+        width: 100%;
+        text-align: center;
+        h1 {
+          font-size: 20px;
+        }
+        p {
+          width: 99%;
+          font-size: 15px;
+        }
+      }
+    }
+
+    .food-categories {
+      width: 100%;
+      margin: auto;
+
+      h3 {
+        font-size: 22px;
+        text-align: center;
+      }
+      .food-icons {
+        width: 100%;
+        flex-wrap: wrap;
+        background: none;
+        border: none;
+        height: 550px;
+        margin: auto;
+
+        div {
+          width: 120px;
+        }
+        figcaption {
+          font-size: 10px;
+        }
+      }
+
+      .food-container {
+        .foodCard {
+          img {
+            width: 100%;
+            top: 0;
+            left: 0;
+          }
+
+          .foodInfo {
+            #star,
+            #time {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    #carouselExampleControls {
+      height: 250px;
+      h2 {
+        font-size: 16px;
+      }
+    }
+  }
+}

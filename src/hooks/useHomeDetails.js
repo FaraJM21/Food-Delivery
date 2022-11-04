@@ -3,8 +3,7 @@ import { useSelector } from "react-redux";
 
 function useHomeDetails() {
   let windowWidth = useSelector((state) => state.window.value);
-  let isAdmin = useSelector((state) => state.isAdmin.isAdmin);
-  let canvas = useSelector((state) => state.offcanvas.isOpen);
+  
 
   const foods = useSelector((state) => state.foods.foods);
 
@@ -72,8 +71,6 @@ function useHomeDetails() {
 
   return [
     windowWidth,
-    isAdmin,
-    canvas,
     foodsArray,
     displayAll,
     displayBurger,
@@ -83,7 +80,7 @@ function useHomeDetails() {
     displayPizza,
     displaySandwich,
     displaySoup,
-    displayDrinks
+    displayDrinks,
   ];
 }
 
